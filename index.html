@@ -1,10 +1,63 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8" />
     <title>Documents of javascripts</title>
 </head>
+<style>
+    body {
+        background: rgb(44, 53, 128);
+        color: yellowgreen;
+        margin: 60px;
+    }
+
+    .para {
+        text-transform: uppercase;
+        font-size: 35px;
+    }
+</style>
+
 <body>
+    <div>
+        <h1>Javascripts</h1>
+    </div>
+    <div>
+        <select id="colorSelect">
+            <option>red</option>
+            <option>green</option>
+            <option>white</option>
+            <option>black</option>
+        </select>
+        <input type="button" onclick="removecolor()" value="Remove Color">
+    </div>
+    <br>
+    <div>
+        <label for="selectColor">
+            Select a color:
+        </label>
+        <select id="selectColor" onchange="changeColor()">
+            <option>Black</option>
+            <option>Red</option>
+            <option>Green</option>
+            <option>white</option>
+        </select>
+        <p id="js" class="para">Sample Test</p>
+    </div>
+
+    <div>
+        <form id="form1">
+            First name: <input type="text" name="fname" value="David"><br><br>
+            Last name: <input type="text" name="lname" value="Beckham"><br><br>
+            <button onclick="myFunction()" id="submit">submit</button>
+        </form>
+    </div>
+    <br>
+    <div>
+        <br>
+        <button id="jsstyle" onclick="display_random_image();">Show Image</button>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
