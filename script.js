@@ -13,7 +13,7 @@ function factorial(n) {
 }
 console.log('Factorial = ' + factorial(n));
 
-//2.Write a function is Prime(num) that takes a positive integer num and returns true if the number is prime, and false otherwise
+// 2.Write a function is Prime(num) that takes a positive integer num and returns true if the number is prime, and false otherwise
 
 function checkPrime(num) {
     let i, n = true;
@@ -31,29 +31,25 @@ function checkPrime(num) {
 checkPrime(3);
 checkPrime(4);
 
-//3. Write a function sum Even Numbers (start, end) that takes two integers start and end, 
+// 3. Write a function sum Even Numbers (start, end) that takes two integers start and end, 
 //  and returns the sum of all even numbers in the inclusive range from start to end.
-let Sum=0;
-function SumEvenNumbers(start, end){
-    
-    const evenarray=[]
-    
-    for(let i=start;i<=end;i++)
-    {
-         if(i%2==0)
-            {
-                evenarray.push(i)
-            }
-    }
-    console.log(evenarray);
-    for(let j=0;j<5;j++)
-        {
-            Sum=Sum+evenarray[j]
-        }
-        console.log(Sum);
-}
-SumEvenNumbers(1,7);
 
+function sumEvenNumbers(start, end) {
+    // Initialize sum to zero
+    let totalSum = 0;
+    
+    // Iterate through each number in the range from start to end (inclusive)
+    for (let num = start; num <= end; num++) {
+        // Check if the number is even
+        if (num % 2 === 0) {
+            // If even, add it to the total sum
+            totalSum += num;
+        }
+    }
+    
+    return totalSum;
+}
+console.log(sumEvenNumbers(1, 10));
 // 4. Write a JavaScript program to remove items(clicking on a button) from a drop-down list.
 
 // Sample HTML file :
@@ -114,7 +110,7 @@ function myFunction() {
     document.getElementById("form1").innerHTML = "David Backham";
   }
 
-//7. Write a JavaScript program to display a random image (clicking on a button) from the following list.
+// 7. Write a JavaScript program to display a random image (clicking on a button) from the following list.
 // Sample Image information :"http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg&quot;,width: "240", height: "160"
 // "http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg&quot;, width: "320", height: "195"
 //  "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg&quot;, width: "500", height: "343"
