@@ -1,13 +1,13 @@
 // 1. Write a function calculate Factorial (n) that takes a non-negative integer n and returns the factorial of n.(factorial of 5= 5*4*3*2*1=120)
 
-let n= 5;
+let n = 5;
 function factorial(n) {
-    if (n===0) {
-      return 1;  
+    if (n === 0) {
+        return 1;
     }
     else {
-        return n*factorial(
-            n-1  
+        return n * factorial(
+            n - 1
         );
     }
 }
@@ -35,35 +35,34 @@ checkPrime(4);
 //  and returns the sum of all even numbers in the inclusive range from start to end.
 
 function sumEvenNumbers(start, end) {
-    // Initialize sum to zero
+
     let totalSum = 0;
-    
-    // Iterate through each number in the range from start to end (inclusive)
+
     for (let num = start; num <= end; num++) {
-        // Check if the number is even
+
         if (num % 2 === 0) {
-            // If even, add it to the total sum
+
             totalSum += num;
         }
     }
-    
+
     return totalSum;
 }
 console.log(sumEvenNumbers(1, 10));
+
 // 4. Write a JavaScript program to remove items(clicking on a button) from a drop-down list.
 
 // Sample HTML file :
- // <select id="colorSelect">
- // <option>red</option>
- // <option>green</option>
- // <option>white</option>
+// <select id="colorSelect">
+// <option>red</option>
+// <option>green</option>
+// <option>white</option>
 // <option>black</option>
 //  </select>
 
-function removecolor()
-{
-var rele=document.getElementById("colorSelect");
-rele.remove(rele.selectedIndex);
+function removecolor() {
+    var rele = document.getElementById("colorSelect");
+    rele.remove(rele.selectedIndex);
 }
 
 
@@ -71,8 +70,8 @@ rele.remove(rele.selectedIndex);
 
 // Eg : if you select green then the color of the text should be green 
 // Sample HTML file :
- // <select id="colorSelect">
- // <option>red</option>
+// <select id="colorSelect">
+// <option>red</option>
 // <option>green</option>
 // <option>white</option>
 // <option>black</option>
@@ -84,9 +83,9 @@ function changeColor() {
     var js = document.getElementById("js");
     var selectColor =
         document.getElementById("selectColor");
-        var selectedColor =
+    var selectedColor =
         selectColor.options[selectColor.selectedIndex].value;
-        js.style.color = selectedColor;
+    js.style.color = selectedColor;
 }
 
 
@@ -107,8 +106,8 @@ function changeColor() {
 // </html>
 
 function myFunction() {
-    document.getElementById("form1").innerHTML = "David Backham";
-  }
+    document.getElementById("form1").innerHTML = "David Beckham";
+}
 
 // 7. Write a JavaScript program to display a random image (clicking on a button) from the following list.
 // Sample Image information :"http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg&quot;,width: "240", height: "160"
@@ -116,9 +115,8 @@ function myFunction() {
 //  "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg&quot;, width: "500", height: "343"
 
 
-function display_random_image() 
-{
-     var theImages = [{
+function display_random_image() {
+    var theImages = [{
         src: "http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg",
         width: "240",
         height: "160"
@@ -131,7 +129,7 @@ function display_random_image()
         width: "500",
         height: "343"
     }];
-    
+
     var preBuffer = [];
     for (var i = 0, j = theImages.length; i < j; i++) {
         preBuffer[i] = new Image();
@@ -139,28 +137,27 @@ function display_random_image()
         preBuffer[i].width = theImages[i].width;
         preBuffer[i].height = theImages[i].height;
     }
-   
-// create random image number
-  function getRandomInt(min,max) 
-    {
-      //  return Math.floor(Math.random() * (max - min + 1)) + min;
-    
-imn = Math.floor(Math.random() * (max - min + 1)) + min;
-    return preBuffer[imn];
-    }  
 
-// 0 is first image,   preBuffer.length - 1) is  last image
-  
-var newImage = getRandomInt(0, preBuffer.length - 1);
- 
-// remove the previous images
-var images = document.getElementsByTagName('img');
-var l = images.length;
-for (var p = 0; p < l; p++) {
-    images[0].parentNode.removeChild(images[0]);
-}
-// display the image  
-document.body.appendChild(newImage);
+    // create random image number
+    function getRandomInt(min, max) {
+        //  return Math.floor(Math.random() * (max - min + 1)) + min;
+
+        imn = Math.floor(Math.random() * (max - min + 1)) + min;
+        return preBuffer[imn];
+    }
+
+    // 0 is first image,   preBuffer.length - 1) is  last image
+
+    var newImage = getRandomInt(0, preBuffer.length - 1);
+
+    // remove the previous images
+    var images = document.getElementsByTagName('img');
+    var l = images.length;
+    for (var p = 0; p < l; p++) {
+        images[0].parentNode.removeChild(images[0]);
+    }
+    // display the image  
+    document.body.appendChild(newImage);
 }
 
 
